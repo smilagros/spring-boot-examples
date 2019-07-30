@@ -1,0 +1,31 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          okta:
+            client-id: 0oayb1f0obj1uNmau356
+            client-secret: H6_CLXRUvS77YRzPmC0F1EpBKmt5gzZcy3gdvcmp
+            scope: openid, email, profile
+        provider:
+          okta:
+            issuer-uri: https://dev-292512.okta.com/oauth2/default
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/azumhererp?useTimezone=true&serverTimezone=UTC
+    username: root
+    password: susana
+  jpa:
+    generate-ddl: true
+    show-sql: true    
+logging:
+  file: logs/application-debug.log
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+    file: "%d %-5level [%thread] %logger : %msg%n"
+  level:
+    org.springframework.web: DEBUG
+    com.howtodoinjava: DEBUG
+    org.hibernate: ERROR              
+    
+           
