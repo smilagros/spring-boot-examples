@@ -16,7 +16,7 @@ This example shows how to test your Spring Boot apps with JUnit 5. Please read [
 To install this example, run the following commands:
 
 ```bash
-git clone https://github.com/oktadeveloper/okta-spring-boot-junit5-example.git
+git https://github.com/smilagros/spring-boot-examples.git
 cd okta-spring-boot-junit5-example
 ```
 
