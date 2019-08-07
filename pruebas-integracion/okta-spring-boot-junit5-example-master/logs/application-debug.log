@@ -1,0 +1,330 @@
+2019-08-01 22:55:40,995 INFO  [main] com.example.joy.myFirstSpringBoot.SpringBootRestApiApplication : Starting SpringBootRestApiApplication on LAPTOP-5DTT44KC with PID 54184 (D:\spring-boot-examples\spring-boot-examples\okta-spring-boot-junit5-example-master\target\classes started by USUARIO in D:\spring-boot-examples\spring-boot-examples\okta-spring-boot-junit5-example-master)
+2019-08-01 22:55:40,999 INFO  [main] com.example.joy.myFirstSpringBoot.SpringBootRestApiApplication : No active profile set, falling back to default profiles: default
+2019-08-01 22:55:41,851 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2019-08-01 22:55:41,872 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2019-08-01 22:55:41,875 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-01 22:55:41,957 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2019-08-01 22:55:41,957 DEBUG [main] org.springframework.web.context.ContextLoader : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-08-01 22:55:41,957 INFO  [main] org.springframework.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 927 ms
+2019-08-01 22:55:42,407 DEBUG [main] org.springframework.web.client.RestTemplate : HTTP GET https://dev-292512.okta.com/oauth2/default/.well-known/openid-configuration
+2019-08-01 22:55:42,411 DEBUG [main] org.springframework.web.client.RestTemplate : Accept=[text/plain, application/json, application/*+json, */*]
+2019-08-01 22:55:43,472 DEBUG [main] org.springframework.web.client.RestTemplate : Response 200 OK
+2019-08-01 22:55:43,476 DEBUG [main] org.springframework.web.client.RestTemplate : Reading to [java.lang.String] as "application/json;charset=UTF-8"
+2019-08-01 22:55:43,610 DEBUG [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-08-01 22:55:43,691 INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-01 22:55:43,903 DEBUG [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-08-01 22:55:44,013 DEBUG [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2019-08-01 22:55:44,021 DEBUG [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-08-01 22:55:44,026 DEBUG [main] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-08-01 22:55:44,061 WARN  [main] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtDecoder' defined in class path resource [com/okta/spring/boot/oauth/OktaOAuth2ResourceServerAutoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.jwt.JwtDecoder]: Factory method 'jwtDecoder' threw exception; nested exception is java.lang.IllegalArgumentException: jwkSetUrl cannot be empty
+2019-08-01 22:55:44,061 INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-01 22:55:44,064 INFO  [main] org.apache.catalina.core.StandardService : Stopping service [Tomcat]
+2019-08-01 22:55:44,074 INFO  [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-08-01 22:55:44,082 ERROR [main] org.springframework.boot.SpringApplication : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtDecoder' defined in class path resource [com/okta/spring/boot/oauth/OktaOAuth2ResourceServerAutoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.jwt.JwtDecoder]: Factory method 'jwtDecoder' threw exception; nested exception is java.lang.IllegalArgumentException: jwkSetUrl cannot be empty
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.example.joy.myFirstSpringBoot.SpringBootRestApiApplication.main(SpringBootRestApiApplication.java:13)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.jwt.JwtDecoder]: Factory method 'jwtDecoder' threw exception; nested exception is java.lang.IllegalArgumentException: jwkSetUrl cannot be empty
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: jwkSetUrl cannot be empty
+	at org.springframework.util.Assert.hasText(Assert.java:284)
+	at org.springframework.security.oauth2.jwt.NimbusJwtDecoderJwkSupport.<init>(NimbusJwtDecoderJwkSupport.java:103)
+	at org.springframework.security.oauth2.jwt.NimbusJwtDecoderJwkSupport.<init>(NimbusJwtDecoderJwkSupport.java:93)
+	at com.okta.spring.boot.oauth.OktaOAuth2ResourceServerAutoConfig.jwtDecoder(OktaOAuth2ResourceServerAutoConfig.java:49)
+	at com.okta.spring.boot.oauth.OktaOAuth2ResourceServerAutoConfig$$EnhancerBySpringCGLIB$$b6ba4ae9.CGLIB$jwtDecoder$0(<generated>)
+	at com.okta.spring.boot.oauth.OktaOAuth2ResourceServerAutoConfig$$EnhancerBySpringCGLIB$$b6ba4ae9$$FastClassBySpringCGLIB$$5c20359d.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at com.okta.spring.boot.oauth.OktaOAuth2ResourceServerAutoConfig$$EnhancerBySpringCGLIB$$b6ba4ae9.jwtDecoder(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 20 common frames omitted
+2019-08-01 22:57:15,694 INFO  [main] com.example.joy.myFirstSpringBoot.SpringBootRestApiApplication : Starting SpringBootRestApiApplication on LAPTOP-5DTT44KC with PID 54752 (D:\spring-boot-examples\spring-boot-examples\okta-spring-boot-junit5-example-master\target\classes started by USUARIO in D:\spring-boot-examples\spring-boot-examples\okta-spring-boot-junit5-example-master)
+2019-08-01 22:57:15,698 INFO  [main] com.example.joy.myFirstSpringBoot.SpringBootRestApiApplication : No active profile set, falling back to default profiles: default
+2019-08-01 22:57:16,552 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2019-08-01 22:57:16,571 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2019-08-01 22:57:16,572 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-01 22:57:16,651 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2019-08-01 22:57:16,652 DEBUG [main] org.springframework.web.context.ContextLoader : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-08-01 22:57:16,652 INFO  [main] org.springframework.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 920 ms
+2019-08-01 22:57:17,098 DEBUG [main] org.springframework.web.client.RestTemplate : HTTP GET https://dev-292512.okta.com/oauth2/default/.well-known/openid-configuration
+2019-08-01 22:57:17,101 DEBUG [main] org.springframework.web.client.RestTemplate : Accept=[text/plain, application/json, application/*+json, */*]
+2019-08-01 22:57:18,151 DEBUG [main] org.springframework.web.client.RestTemplate : Response 200 OK
+2019-08-01 22:57:18,156 DEBUG [main] org.springframework.web.client.RestTemplate : Reading to [java.lang.String] as "application/json;charset=UTF-8"
+2019-08-01 22:57:18,279 DEBUG [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-08-01 22:57:18,351 INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-01 22:57:18,360 DEBUG [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-08-01 22:57:18,448 DEBUG [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2019-08-01 22:57:18,456 DEBUG [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-08-01 22:57:18,461 DEBUG [main] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-08-01 22:57:18,496 WARN  [main] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtDecoder' defined in class path resource [com/okta/spring/boot/oauth/OktaOAuth2ResourceServerAutoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.jwt.JwtDecoder]: Factory method 'jwtDecoder' threw exception; nested exception is java.lang.IllegalArgumentException: jwkSetUrl cannot be empty
+2019-08-01 22:57:18,496 INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-01 22:57:18,499 INFO  [main] org.apache.catalina.core.StandardService : Stopping service [Tomcat]
+2019-08-01 22:57:18,509 INFO  [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-08-01 22:57:18,518 ERROR [main] org.springframework.boot.SpringApplication : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtDecoder' defined in class path resource [com/okta/spring/boot/oauth/OktaOAuth2ResourceServerAutoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.jwt.JwtDecoder]: Factory method 'jwtDecoder' threw exception; nested exception is java.lang.IllegalArgumentException: jwkSetUrl cannot be empty
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.example.joy.myFirstSpringBoot.SpringBootRestApiApplication.main(SpringBootRestApiApplication.java:13)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.jwt.JwtDecoder]: Factory method 'jwtDecoder' threw exception; nested exception is java.lang.IllegalArgumentException: jwkSetUrl cannot be empty
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: jwkSetUrl cannot be empty
+	at org.springframework.util.Assert.hasText(Assert.java:284)
+	at org.springframework.security.oauth2.jwt.NimbusJwtDecoderJwkSupport.<init>(NimbusJwtDecoderJwkSupport.java:103)
+	at org.springframework.security.oauth2.jwt.NimbusJwtDecoderJwkSupport.<init>(NimbusJwtDecoderJwkSupport.java:93)
+	at com.okta.spring.boot.oauth.OktaOAuth2ResourceServerAutoConfig.jwtDecoder(OktaOAuth2ResourceServerAutoConfig.java:49)
+	at com.okta.spring.boot.oauth.OktaOAuth2ResourceServerAutoConfig$$EnhancerBySpringCGLIB$$bf4c76fc.CGLIB$jwtDecoder$0(<generated>)
+	at com.okta.spring.boot.oauth.OktaOAuth2ResourceServerAutoConfig$$EnhancerBySpringCGLIB$$bf4c76fc$$FastClassBySpringCGLIB$$f8e95038.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at com.okta.spring.boot.oauth.OktaOAuth2ResourceServerAutoConfig$$EnhancerBySpringCGLIB$$bf4c76fc.jwtDecoder(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 20 common frames omitted
+2019-08-01 22:58:07,705 INFO  [main] com.example.joy.myFirstSpringBoot.SpringBootRestApiApplication : Starting SpringBootRestApiApplication on LAPTOP-5DTT44KC with PID 49172 (D:\spring-boot-examples\spring-boot-examples\okta-spring-boot-junit5-example-master\target\classes started by USUARIO in D:\spring-boot-examples\spring-boot-examples\okta-spring-boot-junit5-example-master)
+2019-08-01 22:58:07,708 INFO  [main] com.example.joy.myFirstSpringBoot.SpringBootRestApiApplication : No active profile set, falling back to default profiles: default
+2019-08-01 22:58:08,577 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2019-08-01 22:58:08,597 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2019-08-01 22:58:08,598 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-01 22:58:08,698 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2019-08-01 22:58:08,698 DEBUG [main] org.springframework.web.context.ContextLoader : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-08-01 22:58:08,698 INFO  [main] org.springframework.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 957 ms
+2019-08-01 22:58:09,162 DEBUG [main] org.springframework.web.client.RestTemplate : HTTP GET https://dev-292512.okta.com/oauth2/default/.well-known/openid-configuration
+2019-08-01 22:58:09,166 DEBUG [main] org.springframework.web.client.RestTemplate : Accept=[text/plain, application/json, application/*+json, */*]
+2019-08-01 22:58:10,152 DEBUG [main] org.springframework.web.client.RestTemplate : Response 200 OK
+2019-08-01 22:58:10,173 DEBUG [main] org.springframework.web.client.RestTemplate : Reading to [java.lang.String] as "application/json;charset=UTF-8"
+2019-08-01 22:58:10,284 DEBUG [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-08-01 22:58:10,357 INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-01 22:58:10,365 DEBUG [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-08-01 22:58:10,454 DEBUG [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2019-08-01 22:58:10,463 DEBUG [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-08-01 22:58:10,469 DEBUG [main] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-08-01 22:58:10,505 WARN  [main] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtDecoder' defined in class path resource [com/okta/spring/boot/oauth/OktaOAuth2ResourceServerAutoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.jwt.JwtDecoder]: Factory method 'jwtDecoder' threw exception; nested exception is java.lang.IllegalArgumentException: jwkSetUrl cannot be empty
+2019-08-01 22:58:10,505 INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-01 22:58:10,508 INFO  [main] org.apache.catalina.core.StandardService : Stopping service [Tomcat]
+2019-08-01 22:58:10,519 INFO  [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-08-01 22:58:10,528 ERROR [main] org.springframework.boot.SpringApplication : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtDecoder' defined in class path resource [com/okta/spring/boot/oauth/OktaOAuth2ResourceServerAutoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.jwt.JwtDecoder]: Factory method 'jwtDecoder' threw exception; nested exception is java.lang.IllegalArgumentException: jwkSetUrl cannot be empty
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.example.joy.myFirstSpringBoot.SpringBootRestApiApplication.main(SpringBootRestApiApplication.java:13)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.jwt.JwtDecoder]: Factory method 'jwtDecoder' threw exception; nested exception is java.lang.IllegalArgumentException: jwkSetUrl cannot be empty
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: jwkSetUrl cannot be empty
+	at org.springframework.util.Assert.hasText(Assert.java:284)
+	at org.springframework.security.oauth2.jwt.NimbusJwtDecoderJwkSupport.<init>(NimbusJwtDecoderJwkSupport.java:103)
+	at org.springframework.security.oauth2.jwt.NimbusJwtDecoderJwkSupport.<init>(NimbusJwtDecoderJwkSupport.java:93)
+	at com.okta.spring.boot.oauth.OktaOAuth2ResourceServerAutoConfig.jwtDecoder(OktaOAuth2ResourceServerAutoConfig.java:49)
+	at com.okta.spring.boot.oauth.OktaOAuth2ResourceServerAutoConfig$$EnhancerBySpringCGLIB$$c7744f78.CGLIB$jwtDecoder$0(<generated>)
+	at com.okta.spring.boot.oauth.OktaOAuth2ResourceServerAutoConfig$$EnhancerBySpringCGLIB$$c7744f78$$FastClassBySpringCGLIB$$ad0d268d.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at com.okta.spring.boot.oauth.OktaOAuth2ResourceServerAutoConfig$$EnhancerBySpringCGLIB$$c7744f78.jwtDecoder(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 20 common frames omitted
+2019-08-01 22:59:42,793 INFO  [main] com.example.joy.myFirstSpringBoot.SpringBootRestApiApplication : Starting SpringBootRestApiApplication on LAPTOP-5DTT44KC with PID 56008 (D:\spring-boot-examples\spring-boot-examples\okta-spring-boot-junit5-example-master\target\classes started by USUARIO in D:\spring-boot-examples\spring-boot-examples\okta-spring-boot-junit5-example-master)
+2019-08-01 22:59:42,797 INFO  [main] com.example.joy.myFirstSpringBoot.SpringBootRestApiApplication : No active profile set, falling back to default profiles: default
+2019-08-01 22:59:43,661 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2019-08-01 22:59:43,683 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2019-08-01 22:59:43,684 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-01 22:59:43,765 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2019-08-01 22:59:43,766 DEBUG [main] org.springframework.web.context.ContextLoader : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-08-01 22:59:43,766 INFO  [main] org.springframework.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 937 ms
+2019-08-01 22:59:44,208 DEBUG [main] org.springframework.web.client.RestTemplate : HTTP GET https://dev-292512.okta.com/oauth2/default/.well-known/openid-configuration
+2019-08-01 22:59:44,211 DEBUG [main] org.springframework.web.client.RestTemplate : Accept=[text/plain, application/json, application/*+json, */*]
+2019-08-01 22:59:45,373 DEBUG [main] org.springframework.web.client.RestTemplate : Response 200 OK
+2019-08-01 22:59:45,375 DEBUG [main] org.springframework.web.client.RestTemplate : Reading to [java.lang.String] as "application/json;charset=UTF-8"
+2019-08-01 22:59:45,486 DEBUG [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-08-01 22:59:45,568 INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-01 22:59:45,580 DEBUG [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-08-01 22:59:45,681 DEBUG [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2019-08-01 22:59:45,688 DEBUG [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-08-01 22:59:45,694 DEBUG [main] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-08-01 22:59:45,738 WARN  [main] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtDecoder' defined in class path resource [com/okta/spring/boot/oauth/OktaOAuth2ResourceServerAutoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.jwt.JwtDecoder]: Factory method 'jwtDecoder' threw exception; nested exception is java.lang.IllegalArgumentException: jwkSetUrl cannot be empty
+2019-08-01 22:59:45,738 INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-01 22:59:45,741 INFO  [main] org.apache.catalina.core.StandardService : Stopping service [Tomcat]
+2019-08-01 22:59:45,751 INFO  [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-08-01 22:59:45,760 ERROR [main] org.springframework.boot.SpringApplication : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtDecoder' defined in class path resource [com/okta/spring/boot/oauth/OktaOAuth2ResourceServerAutoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.jwt.JwtDecoder]: Factory method 'jwtDecoder' threw exception; nested exception is java.lang.IllegalArgumentException: jwkSetUrl cannot be empty
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.example.joy.myFirstSpringBoot.SpringBootRestApiApplication.main(SpringBootRestApiApplication.java:13)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.jwt.JwtDecoder]: Factory method 'jwtDecoder' threw exception; nested exception is java.lang.IllegalArgumentException: jwkSetUrl cannot be empty
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: jwkSetUrl cannot be empty
+	at org.springframework.util.Assert.hasText(Assert.java:284)
+	at org.springframework.security.oauth2.jwt.NimbusJwtDecoderJwkSupport.<init>(NimbusJwtDecoderJwkSupport.java:103)
+	at org.springframework.security.oauth2.jwt.NimbusJwtDecoderJwkSupport.<init>(NimbusJwtDecoderJwkSupport.java:93)
+	at com.okta.spring.boot.oauth.OktaOAuth2ResourceServerAutoConfig.jwtDecoder(OktaOAuth2ResourceServerAutoConfig.java:49)
+	at com.okta.spring.boot.oauth.OktaOAuth2ResourceServerAutoConfig$$EnhancerBySpringCGLIB$$841048b2.CGLIB$jwtDecoder$0(<generated>)
+	at com.okta.spring.boot.oauth.OktaOAuth2ResourceServerAutoConfig$$EnhancerBySpringCGLIB$$841048b2$$FastClassBySpringCGLIB$$9111d218.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at com.okta.spring.boot.oauth.OktaOAuth2ResourceServerAutoConfig$$EnhancerBySpringCGLIB$$841048b2.jwtDecoder(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 20 common frames omitted
+2019-08-01 23:00:11,762 INFO  [main] com.example.joy.myFirstSpringBoot.SpringBootRestApiApplication : Starting SpringBootRestApiApplication on LAPTOP-5DTT44KC with PID 56844 (D:\spring-boot-examples\spring-boot-examples\okta-spring-boot-junit5-example-master\target\classes started by USUARIO in D:\spring-boot-examples\spring-boot-examples\okta-spring-boot-junit5-example-master)
+2019-08-01 23:00:11,766 INFO  [main] com.example.joy.myFirstSpringBoot.SpringBootRestApiApplication : No active profile set, falling back to default profiles: default
+2019-08-01 23:00:12,632 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2019-08-01 23:00:12,651 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2019-08-01 23:00:12,652 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-01 23:00:12,741 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2019-08-01 23:00:12,741 DEBUG [main] org.springframework.web.context.ContextLoader : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-08-01 23:00:12,741 INFO  [main] org.springframework.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 943 ms
+2019-08-01 23:00:13,205 DEBUG [main] org.springframework.web.client.RestTemplate : HTTP GET https://dev-292512.okta.com/oauth2/default/.well-known/openid-configuration
+2019-08-01 23:00:13,208 DEBUG [main] org.springframework.web.client.RestTemplate : Accept=[text/plain, application/json, application/*+json, */*]
+2019-08-01 23:00:14,179 DEBUG [main] org.springframework.web.client.RestTemplate : Response 200 OK
+2019-08-01 23:00:14,182 DEBUG [main] org.springframework.web.client.RestTemplate : Reading to [java.lang.String] as "application/json;charset=UTF-8"
+2019-08-01 23:00:14,281 DEBUG [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-08-01 23:00:14,355 INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-01 23:00:14,365 DEBUG [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-08-01 23:00:14,458 DEBUG [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2019-08-01 23:00:14,465 DEBUG [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-08-01 23:00:14,470 DEBUG [main] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-08-01 23:00:14,505 WARN  [main] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtDecoder' defined in class path resource [com/okta/spring/boot/oauth/OktaOAuth2ResourceServerAutoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.jwt.JwtDecoder]: Factory method 'jwtDecoder' threw exception; nested exception is java.lang.IllegalArgumentException: jwkSetUrl cannot be empty
+2019-08-01 23:00:14,505 INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-01 23:00:14,508 INFO  [main] org.apache.catalina.core.StandardService : Stopping service [Tomcat]
+2019-08-01 23:00:14,519 INFO  [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-08-01 23:00:14,529 ERROR [main] org.springframework.boot.SpringApplication : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtDecoder' defined in class path resource [com/okta/spring/boot/oauth/OktaOAuth2ResourceServerAutoConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.jwt.JwtDecoder]: Factory method 'jwtDecoder' threw exception; nested exception is java.lang.IllegalArgumentException: jwkSetUrl cannot be empty
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.example.joy.myFirstSpringBoot.SpringBootRestApiApplication.main(SpringBootRestApiApplication.java:13)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.jwt.JwtDecoder]: Factory method 'jwtDecoder' threw exception; nested exception is java.lang.IllegalArgumentException: jwkSetUrl cannot be empty
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: jwkSetUrl cannot be empty
+	at org.springframework.util.Assert.hasText(Assert.java:284)
+	at org.springframework.security.oauth2.jwt.NimbusJwtDecoderJwkSupport.<init>(NimbusJwtDecoderJwkSupport.java:103)
+	at org.springframework.security.oauth2.jwt.NimbusJwtDecoderJwkSupport.<init>(NimbusJwtDecoderJwkSupport.java:93)
+	at com.okta.spring.boot.oauth.OktaOAuth2ResourceServerAutoConfig.jwtDecoder(OktaOAuth2ResourceServerAutoConfig.java:49)
+	at com.okta.spring.boot.oauth.OktaOAuth2ResourceServerAutoConfig$$EnhancerBySpringCGLIB$$31cebf5c.CGLIB$jwtDecoder$0(<generated>)
+	at com.okta.spring.boot.oauth.OktaOAuth2ResourceServerAutoConfig$$EnhancerBySpringCGLIB$$31cebf5c$$FastClassBySpringCGLIB$$434bfd3b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at com.okta.spring.boot.oauth.OktaOAuth2ResourceServerAutoConfig$$EnhancerBySpringCGLIB$$31cebf5c.jwtDecoder(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 20 common frames omitted
