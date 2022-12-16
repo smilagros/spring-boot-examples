@@ -8,7 +8,7 @@
     <name>tutorial_spring_security</name>
     
     <properties>
-        <spring.version>4.3.7.RELEASE</spring.version>
+        <spring.version>5.2.20.RELEASE</spring.version>
         <security.version>4.0.3.RELEASE</security.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
